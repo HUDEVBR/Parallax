@@ -22,21 +22,47 @@
             <img src="moon.png" id="moon" >
             <img src="mountains_behind.png" id="mountains_b" > 
             <h2 id="text">Moon Light</h2>
-            <a href="#" id="btn">Explore</a>
+            <a href="#sec" id="btn">Explore</a>
             <img src="mountains_front.png" id="mountains_f">
         </section>
         
-        <div class="sec">
+        <div class="sec" id="sec">
             <h2>Parallax Scrolling Effects</h2>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                Ut ipsa error dolore corrupti quae, dolores delectus, minima nulla 
-                unde, id consequatur possimus aperiam?   Sed ut ullam facere non natus fuga? 
+                Ut ipsa error dolore corrupti quae, <br>dolores delectus, minima nulla 
+                unde, id consequatur possimus aperiam?   Sed ut ullam facere non natus fuga? <br><br>
                 Lorem ipsum dolor, sit amet  consectetur adipisicing elit. Molestias, reiciendis aspernatur
-                incidunt aut alias accusam us vitae explicabo repellendus iste earum. Minus, aliquid?
-                Officia assumenda voluptatem quos minus ea nesciunt nihil? Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Eius ea debitis commodi et voluptatem porro 
-                maxime atque, blanditiis tempore alias? Minus corporis officiis, ab dignissimos eos 
-                laboriosam culpa eligendi nisi?</p>
+                incidunt aut <br>alias accusam us vitae explicabo repellendus iste earum. Minus, aliquid?
+                Officia assumenda voluptatem <br>quos minus ea nesciunt nihil? Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. <br><br>Eius ea debitis commodi et voluptatem porro 
+                maxime atque, blanditiis tempore alias? Minus corporis officiis,<br> ab dignissimos eos 
+                laboriosam culpa eligendi nisi?!LoremIn eu occaecat amet ipsum.Consectetur nulla ullamco id in nisi enim velit 
+                <br>mollit dolore ut deserunt minim.Anim exercitation do exercitation id Lorem aliquip esse labore aliquip deserunt velit.
+                <br> <br> Aliquip commodo dolor amet aliqua enim nisi cillum laboris commodo.Cillum cillum cillum consectetur labore 
+                non sunt officia velit<br>   proident deserunt aute ex amet mollit.Aliquip enim occaecat elit nostrud exercitation incididunt.
+                Dolor incididunt <br> consectetur exercitation do magna.Sint nostrud occaecat ex esse deserunt id ea.
+                <br> <br> Non laborum ut tempor exercitation  nulla ea ut esse  ea eiusmod fugiat.Excepteur qui officia nostrud do elit irure 
+                esse commodo officia ut id est qui nostrud.Fugiat dolore ullamco enim ad adipisicing laborum ut exercitation culpa cillum
+                 eiusmod adipisicing est.Qui incididunt deserunt eiusmod pariatur aute qui nulla sint excepteur pariatur sint id excepteur dolor.
+                 Est aute fugiat id adipisicing consectetur eu ipsum occaecat.Ut qui consectetur sint commodo culpa esse.
+            </p>
         </div>
+        <script>
+            let stars = document.getElementById('stars') ;
+            let moon = document.getElementById('moon') ;
+            let mountains_b = document.getElementById('mountains_b') ;
+            let text = document.getElementById('text') ;
+            let btn = document.getElementById('btn') ;
+            let mountains_f = document.getElementById('mountains_f') ;
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value  * 0.25 + 'px';
+                moon.style.top = value * 1.05  + 'px';
+                mountains_b.style.top = value * 0.5  + 'px';
+                mountains_f.style.top = value * 0  + 'px';
+                text.style.marginRight = value * 4  + 'px';
+            })
+        </script>
     </body>
 </html>
